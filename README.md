@@ -17,18 +17,26 @@ You can install these packages using pip:
 When you run the script, it will prompt you to enter your country code and phone number. The script will then validate the phone number and provide additional information about the phone number if it is valid.
 
 
-$ python phone_number_validator.py
-Select your country code from the list below:
-AD - Andorra
-AE - United Arab Emirates
-AF - Afghanistan
+    $ python phone_number_validator.py
+    Select your country code from the list below:
+    AD - Andorra
+    AE - United Arab Emirates
+    AF - Afghanistan
 ...
-Enter your country code: US
-Enter the phone number to validate (including country code): +1 650-253-0000
-Phone number validation results:
-Parsed phone number: +16502530000
-Phone number is valid for user's location: United States
-(E.164 format): +16502530000(International format): +1 650-253-0000(National format): (650) 253-0000(RFC3966 format): tel:+1-650-253-## 📚 Explanation of the Code
+
+    Enter your country code: US
+    Enter the phone number to validate (including country code): +1 650-253-0000
+    Phone number validation results:
+    Parsed phone number: +16502530000
+    Phone number is valid for user's location: United States
+    (E.164 format): 
+        +16502530000(International format): 
+        +1 650-253-0000(National format): 
+        (650) 253-0000(RFC3966 format): 
+        tel:+1-650-253-## 
+        
+### 📚 Explanation of the Code
+
 
 The code uses the `phonenumbers` library to handle phone numbers, the `pycountry` library to handle country codes, and the Python `input()` function to get user input.
 
