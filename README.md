@@ -10,7 +10,7 @@ To use this script, you'll need to have Python 3 and the following packages inst
 
 You can install these packages using pip:
 
-pip install phonenumbers pycountry
+    pip install phonenumbers pycountry
 
 ### 📝 Usage
 
