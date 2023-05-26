@@ -22,18 +22,24 @@ When you run the script, it will prompt you to enter your country code and phone
     AD - Andorra
     AE - United Arab Emirates
     AF - Afghanistan
-...
+    ...
+    ...
+    ...
+    ZW - Zimbabwe
 
     Enter your country code: US
     Enter the phone number to validate (including country code): +1 650-253-0000
     Phone number validation results:
-    Parsed phone number: +16502530000
+    Country Code: 1 National Number: 6502530000
     Phone number is valid for user's location: United States
-    (E.164 format): 
-        +16502530000(International format): 
-        +1 650-253-0000(National format): 
-        (650) 253-0000(RFC3966 format): 
-        tel:+1-650-253-## 
+    All possible formats:
+        (E.164 format): +16502530000
+        (International format): +1 650-253-0000
+        (National format): (650) 253-0000
+        (RFC3966 format): tel:+1-650-253-0000
+    Carrier (TSP):
+    Time zone: ('America/Los_Angeles',)
+    Location: Mountain View, CA 
         
 ### 📚 Explanation of the Code
 
