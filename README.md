@@ -22,18 +22,24 @@ When you run the script, it will prompt you to enter your country code and phone
     AD - Andorra
     AE - United Arab Emirates
     AF - Afghanistan
-...
+    ...
+    ...
+    ...
+    ZW - Zimbabwe
 
-    Enter your country code: US
-    Enter the phone number to validate (including country code): +1 650-253-0000
+    Enter your country code: ET
+    Enter the phone number to validate (including country code): +251987654321
     Phone number validation results:
-    Parsed phone number: +16502530000
-    Phone number is valid for user's location: United States
-    (E.164 format): 
-        +16502530000(International format): 
-        +1 650-253-0000(National format): 
-        (650) 253-0000(RFC3966 format): 
-        tel:+1-650-253-## 
+    Country Code: 251 National Number: 987654321
+    Phone number is valid for user's location: Ethiopia
+    All possible formats:
+    (E.164 format): +251987654321
+    (International format): +251 98 765 4321
+    (National format): 098 765 4321
+    (RFC3966 format): tel:+251-98-765-4321
+    Carrier (TSP): Ethio Telecom
+    Time zone: ('Africa/Addis_Ababa',)
+    Location: Ethiopia 
         
 ### 📚 Explanation of the Code
 
