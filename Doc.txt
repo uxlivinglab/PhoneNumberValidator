@@ -1,28 +1,17 @@
 The given code is a Python script that validates a phone number entered by the user.
 
-It starts by importing the necessary modules: 
-phonenumbers, 
-pycountry, 
-carrier,
-timezone, and geocoder. 
+The program defines one function:
+get_phone_info(phone_number)
 
-The phonenumbers module provides functions to parse, validate, and format phone numbers, 
-while the pycountry module provides a list of all country codes. 
-The carrier, timezone, and geocoder modules provide additional information about phone numbers, such as carrier name, time zone, and country.
+This function takes a phone number as input and returns a tuple containing the country name, carrier name, and location of the phone number, if they are available. If the phone number is not valid or if an error occurs during the validation process, the function returns None, None, None.
+Libraries
 
-The script then gets a list of all country codes and prints them along with the corresponding country names. 
-It then prompts the user to enter their two-letter country code and the phone number to validate.
+This program uses the following libraries:
 
-The phone number is first parsed using the phonenumbers.parse() function without a country code. 
-This function attempts to parse the phone number using a default country code and returns a PhoneNumber object. 
-The parsed number is checked for validity using phonenumbers.is_possible_number(), which returns True if the number is valid according to the rules for the given region.
+phonenumbers
 
-Next, the phone number is parsed again using the phonenumbers.parse() function with the user's country code. 
-This function attempts to parse the phone number using the specified country code and returns a PhoneNumber object.
+This library provides functions for parsing, formatting, and validating international phone numbers. It is used to validate the phone number and get information about the carrier and location for a valid phone number.
 
-The script then checks if the phone number is valid for the user's country using phonenumbers.is_valid_number_for_region(). 
-If the phone number is valid, it prints additional information about the phone number, including the carrier name, time zone,and country.
+pycountry
 
-If the phone number is not valid for the user's country, the script prints a message indicating that the phone number is invalid for the user's location and suggests the correct format for the phone number in the user's country using the phonenumbers.country_code_for_region() function.
-
-Altogether, this script uses the phonenumbers and pycountry modules to validate and provide additional information about phone numbers. It is useful for applications that require phone number validation and localization.
+This library provides a database of country names and codes based on the ISO 3166 standard. It is used to get the name of the country for a valid phone number.
