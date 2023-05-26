@@ -60,31 +60,33 @@ def validate_phone_number(parsed_number, user_country):
 
 
 
+
 def print_validation_results(parsed_number, validation_results, additional_info):
     """
     Prints the validation results and additional information about the phone number.
     """
     print("Phone number validation results:")
-    print(f"Parsed phone number: {parsed_number}")
+    print(parsed_number)
     if validation_results["is_possible"]:
         if validation_results["is_valid_4_region"]:
             print(f"Phone number is valid for user's location: {additional_info['country']}")
 
             # Print different formats of the phone number
-            print(f"(E.164 format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.E164)}", end="")
-            print(f"(International format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)}", end="")
-            print(f"(National format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.NATIONAL)}", end="")
-            print(f"(RFC3966 format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.RFC3966)}", end="")
+            print("All possible formats: ")
+            print(f"(E.164 format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.E164)}")
+            print(f"(International format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)}")
+            print(f"(National format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.NATIONAL)}")
+            print(f"(RFC3966 format): {phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.RFC3966)}")
 
             # Print additional information about the phone number
-            print(f"Carrier: {additional_info['carrier']}")
+            print(f"Carrier (TSP): {additional_info['carrier']}")
             print(f"Time zone: {additional_info['time_zone']}")
             print(f"Location: {additional_info['location']}")
         else:
             print(f"Currently, phone number is invalid for user's location, which is {additional_info['country']}")
     else:
         print(f"Phone number {parsed_number} is not possible")
-        print(f"The format of phone numbers for {additional_info['country']} is {phonenumbers.country_code_for_region(user_country.upper())}")
+        print(f"The format of phone numbers for {pycountry.countries.get(alpha_2=user_country).name} is {phonenumbers.country_code_for_region(user_country.upper())}### ### ###")
 
 
 
