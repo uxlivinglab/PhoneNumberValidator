@@ -86,7 +86,7 @@ def print_validation_results(parsed_number, validation_results, additional_info)
             print(f"Currently, phone number is invalid for user's location, which is {additional_info['country']}")
     else:
         print(f"Phone number {parsed_number} is not possible")
-        print(f"The format of phone numbers for {additional_info['country']} is {phonenumbers.country_code_for_region(user_country.upper())}")
+        print(f"The format of phone numbers for {pycountry.countries.get(alpha_2=user_country).name} is {phonenumbers.country_code_for_region(user_country.upper())}### ### ###")
 
 
 
